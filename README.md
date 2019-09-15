@@ -13,7 +13,7 @@ aws_access_key_id = fake_access_key_id
 aws_secret_access_key = fake_secret_access_key
 ```
 
-And another file at `~/.aws/credentials` with the following contents:
+And another file at `~/.aws/config` with the following contents:
 ```
 [default]
 region = us-east-1
