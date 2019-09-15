@@ -1,10 +1,27 @@
-# dynamodb-admin
+# Running dynamodb-admin on a Mac
 
 ## Usage with Docker
 ```bash
 # pull in the dynamodb local image
 $ docker pull amazon/dynamodb-local
+```
 
+Configure dynamodb-local by creating a file at `~/.aws/credentials` with the following contents:
+```
+[default]
+aws_access_key_id = fake_access_key_id
+aws_secret_access_key = fake_secret_access_key
+```
+
+And another file at `~/.aws/credentials` with the following contents:
+```
+[default]
+region = us-east-1
+output = json
+```
+
+### Run the DB and run the admin portal
+```bash
 # run dynamodb on port 8000
 $ docker run -p 8000:8000 amazon/dynamodb-local
 
